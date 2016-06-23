@@ -1,0 +1,6 @@
+AddType application/x-httpd-php .html
+AddDefaultCharset Windows-1251
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^page_([0-9]+).([0-9]+).([0-9]+).([0-9]+).html$ index.php?page=$1&header=$2&body=$3&footer=$4 [L]
+</IfModule>
